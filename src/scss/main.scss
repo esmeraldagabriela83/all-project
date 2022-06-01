@@ -1,0 +1,313 @@
+@mixin xs {
+  @media only screen and (min-width: 420px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin md {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+///////////////////////////////////////////
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+///////////////////////////////////
+
+html {
+  font-family: Arial,Helvetica sans-serif;
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: CadetBlue;
+  color: lighten(#9370DB, 20%);
+  @include xs {
+    background-color: Chocolate;
+    color: lighten(#9370DB, 30%);
+    font-size: 1.3rem;
+  }
+  @include sm {
+    background-color: AliceBlue;
+    color: lighten(#9370DB, 40%);
+    font-size: 1.4rem;
+    color: CadetBlue;
+  }
+  @include md {
+    background-color: Cornsilk;
+    color: Chocolate;
+    font-size: 1.5rem;
+  }
+
+  main {
+    &#app {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .container {
+      border: 3px solid black;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+
+    nav{
+      display:flex;
+      align-items: start;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.5em;
+
+      ion-icon{
+        color:DimGray;
+        &:hover{
+          color: #262626;
+        }
+      }
+
+      ul{
+  display:block;
+
+  @include xs {
+    display:flex;
+    align-items:center;
+    justify-content:space;
+    margin-left:-10em;
+  }
+
+  @include sm {
+    display:flex;
+    align-items:center;
+    justify-content:space;
+    margin-left:-9em;
+  }
+
+  @include md {
+    display:flex;
+    align-items:center;
+    justify-content:space;
+    margin-left:-8.5em;
+  }
+
+        li{
+          a {
+            color:DimGray;
+            &:hover{
+              color: #262626;
+            }
+
+          }
+        }
+      }
+    }
+
+    .footer{
+      h5{
+        text-align: center;
+        margin:0.5em 0;
+        a{
+          color:DimGray;
+          &:hover{
+            color: #262626;
+          }
+        }
+
+      }
+    }
+
+    #content {
+      display: flex;
+      flex-direction: row;
+
+      .aside {
+        border: 10px dotted red;
+        height: auto;
+        width: 25vw;
+        display: none;
+        @include md {
+          display: block;
+        }
+
+        section {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          p {
+            margin: 0 0.5em;
+          }
+          p , h3{
+            margin:1em 0;
+          }
+
+        }
+
+        .image-all{
+          height: 300px;
+          width: 80%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          border: 1.5px DimGray solid;
+          border-radius: 0.3em;
+          box-shadow: 1.5px 1.5px 3px gray;
+        }
+
+        #image-left1 {
+          background-image: url("../assets/images/image-left1.jpg");
+        }
+        #image-left2 {
+          margin-top:2.5em;
+          background-image: url("../assets/images/image-left2.jpg");
+        }
+        #image-right1 {
+          background-image: url("../assets/images/image-right1.jpg");
+        }
+        #image-right2 {
+          background-image: url("../assets/images/image-right2.jpg");
+        }
+      }
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.form {
+  display: block;
+  // width: clamp(20%, 45%, 50%);
+  width: 100%;
+  // height:100vh;
+  border-radius: 0.3em;
+  padding: 1.5em;
+  // background-color: Ivory;
+  background-color: lighten(#9370DB, 20%);
+  /*working // it works only in scss*/
+  color: CadetBlue;
+  box-shadow: 1.5px 1.5px 3px gray;
+  @include xs {
+    background-color: lighten(#9370DB, 30%);
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 1.5px 1.5px 3px gray;
+  }
+  @include sm {
+    color: AliceBlue;
+    /*working // it works only in scss*/
+    background-color: CadetBlue;
+    box-shadow: 3px 3px 5px gray;
+  }
+  @include md {
+    color: Cornsilk;
+    /*working // it works only in scss*/
+    background-color: Chocolate;
+    box-shadow: 3px 3px 5px gray;
+  }
+
+  label {
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    // display: block;
+    input {
+      // display: block;
+      width: 100%;
+      line-height: 2em;
+      border-radius: 0.3em;
+      border: 1.5px solid DimGray;
+      font-weight: bold;
+      color: CadetBlue;
+      @include xs {
+        color: Chocolate;
+      }
+      @include sm {
+        color: CadetBlue;
+      }
+      @include md {
+        color: Chocolate;
+      }
+
+      &:focus {
+        outline: none;
+        border: 3px solid gray;
+      }
+    }
+
+    [type="radio"] {
+      margin-top: -3em;
+      display: inline-block;
+    }
+
+    &.error {
+      color: red;
+    }
+
+    &.valid {
+      color: green;
+    }
+  }
+
+  #center-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      margin-top: 0.5em;
+      min-width: 50%;
+      outline: none;
+      background-color: CadetBlue;
+      color: lighten(#9370DB, 20%);
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      border: 1.5px DimGray solid;
+      border-radius: 0.3em;
+      padding: 0.5em;
+      box-shadow: 3px 3px 5px gray;
+      font-size: 1.3rem;
+      @include xs {
+        background-color: lighten(#9370DB, 30%);
+        /*working // it works only in scss*/
+        color: Chocolate;
+        box-shadow: 3px 3px 5px gray;
+      }
+      @include sm {
+        background-color: AliceBlue;
+        /*working // it works only in scss*/
+        color: CadetBlue;
+        box-shadow: 1.5px 1.5px 3px gray;
+        font-size: 1.4rem;
+      }
+      @include md {
+        background-color: Cornsilk;
+        /*working // it works only in scss*/
+        color: Chocolate;
+        box-shadow: 1.5px 1.5px 3px gray;
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        font-weight: bold;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+///

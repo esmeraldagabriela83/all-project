@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "name": "mihaela",
+      "username": "amg-aco",
+      "password": "123a",
+      "email": "micu-pisicu@yahoo.com",
+      "usertype": "basic",
+      "id": 1
+    },
+    {
+      "name": "gabriela Aco",
+      "username": "dent-mihaela",
+      "password": "123aco",
+      "email": "esmeraldagabriela83@yahoo.com",
+      "usertype": "super",
+      "id": 2
+    },
+    {
+      "name": "raluca",
+      "username": "raluca unirii",
+      "password": "ral38",
+      "email": "raluca@yahoo.com",
+      "usertype": "admin",
+      "id": 3
+    },
+    {
+      "name": "alexandru",
+      "username": "alex",
+      "password": "alinasu",
+      "email": "alin@yahoo.com",
+      "usertype": "super",
+      "id": 4
+    }
+  ]
+}
