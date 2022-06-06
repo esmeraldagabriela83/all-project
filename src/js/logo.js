@@ -8,7 +8,7 @@ const styleLogo={
 
 function Logo(){
   return(
-    <div>
+    <div id="logo">
     <span style={styleLogo}>Health</span><br></br><p style={{letterSpacing:"0.25em"}}>Project</p>
     </div>
   )

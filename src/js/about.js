@@ -1,17 +1,21 @@
 import React from "react";
+import Content from "./content";
+import TextField from "./TextField";
 
 const divStyle={
-               border:"3px solid Chartreuse" ,
-               height:"100vh" ,
+               height:"auto" ,
                display:"flex",
                alignItems:"center",
-               justifyContent:"center"
+               justifyContent:"center",
+               flexDirection:"column",
+               height:"auto"
 };
 
 function About(props){
   return(
     <div id="aboutUs" style={divStyle} className="container">
-    <p style={{textAlign:"center"}}>
+    <div><Content/></div>
+    <p style={{textAlign:"center" , margin:"0 1em"}}>
 
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
 The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
@@ -21,6 +25,9 @@ Many desktop publishing packages and web page editors now use Lorem Ipsum as the
 sometimes on purpose (injected humour and the like).
 
     </p>
+
+    <TextField/>
+
     </div>
   )
 }

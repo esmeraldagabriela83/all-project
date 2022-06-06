@@ -1,0 +1,627 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  font-family: Arial, Helvetica sans-serif;
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: CadetBlue;
+  color: #d1c1f0;
+}
+@media only screen and (min-width: 420px) {
+  body {
+    background-color: Chocolate;
+    color: #efeafa;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: AliceBlue;
+    color: white;
+    font-size: 1.4rem;
+    color: CadetBlue;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  body {
+    background-color: Cornsilk;
+    color: Chocolate;
+    font-size: 1.5rem;
+  }
+}
+body main#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main .container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1em;
+}
+body main #upperPart {
+  height: 450px;
+  width: 100vw;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 1.5px 1.5px 3px gray;
+  background-image: url("../assets/images/health.jpg");
+}
+@media only screen and (min-width: 420px) {
+  body main #upperPart {
+    height: 600px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body main #upperPart {
+    height: 800px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  body main #upperPart {
+    height: 900px;
+  }
+}
+body main #upperPart .text {
+  background-color: DimGray;
+  color: white;
+  font-size: 7vw;
+  font-weight: bold;
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+body main nav {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5em;
+}
+body main nav #logo {
+  color: DimGray;
+}
+body main nav ion-icon {
+  color: DimGray;
+  font-size: 2rem;
+}
+body main nav ion-icon:hover {
+  color: #262626;
+}
+body main nav ul {
+  display: block;
+}
+@media only screen and (min-width: 420px) {
+  body main nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space;
+    margin-left: -10em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body main nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space;
+    margin-left: -9em;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  body main nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space;
+    margin-left: -8.5em;
+  }
+}
+body main nav ul li a {
+  color: DimGray;
+}
+body main nav ul li a:hover {
+  color: #262626;
+}
+body main .sources-footer h5 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+body main .sources-footer h5 a {
+  color: DimGray;
+}
+body main .sources-footer h5 a:hover {
+  color: #262626;
+}
+body main #content {
+  display: flex;
+  flex-direction: row;
+}
+body main #content .aside {
+  height: auto;
+  width: 25vw;
+  display: none;
+}
+@media only screen and (min-width: 1280px) {
+  body main #content .aside {
+    display: block;
+  }
+}
+body main #content .aside section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main #content .aside section p {
+  margin: 0 0.5em;
+}
+body main #content .aside section p, body main #content .aside section h3 {
+  margin: 1em 0;
+}
+body main #content .aside .image-all {
+  height: 300px;
+  width: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1.5px DimGray solid;
+  border-radius: 0.3em;
+  box-shadow: 1.5px 1.5px 3px gray;
+}
+body main #content .aside #image-left1 {
+  background-image: url("../assets/images/image-left1.jpg");
+}
+body main #content .aside #image-left2 {
+  background-image: url("../assets/images/image-left2.jpg");
+}
+body main #content .aside #image-right1 {
+  background-image: url("../assets/images/image-right1.jpg");
+}
+body main #content .aside #image-right2 {
+  background-image: url("../assets/images/image-right2.jpg");
+}
+
+.form {
+  display: block;
+  width: 100%;
+  border-radius: 0.3em;
+  padding: 1.5em;
+  background-color: #d1c1f0;
+  /*working // it works only in scss*/
+  color: CadetBlue;
+  box-shadow: 1.5px 1.5px 3px gray;
+}
+@media only screen and (min-width: 420px) {
+  .form {
+    background-color: #efeafa;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 1.5px 1.5px 3px gray;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .form {
+    color: AliceBlue;
+    /*working // it works only in scss*/
+    background-color: CadetBlue;
+    box-shadow: 3px 3px 5px gray;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .form {
+    color: Cornsilk;
+    /*working // it works only in scss*/
+    background-color: #eaa16c;
+    box-shadow: 3px 3px 5px gray;
+  }
+}
+.form label {
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+}
+.form label.error {
+  color: red;
+}
+.form label.error input, .form label.error textarea {
+  border: 3px solid red !important;
+}
+.form label.valid {
+  color: green;
+}
+.form label.valid input, .form label.valid textarea {
+  border: 3px solid green !important;
+}
+.form label input {
+  width: 100%;
+  line-height: 2em;
+  border-radius: 0.3em;
+  border: 1.5px solid DimGray;
+  color: CadetBlue;
+}
+@media only screen and (min-width: 420px) {
+  .form label input {
+    color: Chocolate;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .form label input {
+    color: CadetBlue;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .form label input {
+    font-size: 1.5rem;
+    color: Chocolate;
+  }
+}
+.form label input:focus {
+  outline: none;
+  border: 3px solid gray;
+  background-color: HoneyDew;
+}
+.form label [type=radio] {
+  margin-top: -3em;
+  display: inline-block;
+}
+.form textarea {
+  width: 100%;
+  height: 10vh;
+  border-radius: 0.3em;
+  border: 1.5px solid DimGray;
+  font-weight: bold;
+  color: CadetBlue;
+}
+@media only screen and (min-width: 420px) {
+  .form textarea {
+    color: Chocolate;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .form textarea {
+    color: CadetBlue;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .form textarea {
+    color: Chocolate;
+    font-size: 1.5rem;
+  }
+}
+.form textarea:focus {
+  outline: none;
+  border: 3px solid gray;
+  background-color: HoneyDew;
+}
+.form #center-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form #center-button button {
+  margin-top: 0.5em;
+  min-width: 50%;
+  outline: none;
+  background-color: CadetBlue;
+  color: #d1c1f0;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  box-shadow: 3px 3px 5px gray;
+  font-size: 1.3rem;
+}
+@media only screen and (min-width: 420px) {
+  .form #center-button button {
+    background-color: #efeafa;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 3px 3px 5px gray;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .form #center-button button {
+    background-color: AliceBlue;
+    /*working // it works only in scss*/
+    color: CadetBlue;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .form #center-button button {
+    background-color: Cornsilk;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.5rem;
+  }
+}
+.form #center-button button:hover {
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+select {
+  width: 45%;
+  line-height: 2em;
+  border-radius: 0.3em;
+  border: 1.5px solid DimGray;
+  color: CadetBlue;
+}
+@media only screen and (min-width: 420px) {
+  select {
+    color: Chocolate;
+    font-size: 1.3rem;
+    padding: 0 1em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  select {
+    color: CadetBlue;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  select {
+    font-size: 1.5rem;
+    color: Chocolate;
+  }
+}
+select:focus {
+  outline: none;
+  border: 3px solid gray;
+  background-color: HoneyDew;
+}
+select option {
+  width: 100%;
+  line-height: 2em;
+  border-radius: 0.3em;
+  border: 1.5px solid DimGray;
+  color: CadetBlue;
+}
+@media only screen and (min-width: 420px) {
+  select option {
+    color: Chocolate;
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  select option {
+    color: CadetBlue;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  select option {
+    font-size: 1.5rem;
+    color: Chocolate;
+  }
+}
+select option:focus {
+  outline: none;
+  border: 3px solid gray;
+  background-color: HoneyDew;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#footer button {
+  margin-top: 0.5em;
+  min-width: 50%;
+  outline: none;
+  background-color: CadetBlue;
+  color: #d1c1f0;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  box-shadow: 3px 3px 5px gray;
+  font-size: 1.3rem;
+}
+@media only screen and (min-width: 420px) {
+  #footer button {
+    background-color: #efeafa;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 3px 3px 5px gray;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #footer button {
+    background-color: AliceBlue;
+    /*working // it works only in scss*/
+    color: CadetBlue;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #footer button {
+    background-color: Cornsilk;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.5rem;
+  }
+}
+#footer button:hover {
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+#info button {
+  margin: 1.5em 0;
+  min-width: 50%;
+  outline: none;
+  background-color: CadetBlue;
+  color: #d1c1f0;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  box-shadow: 3px 3px 5px gray;
+  font-size: 1.3rem;
+}
+@media only screen and (min-width: 420px) {
+  #info button {
+    background-color: #efeafa;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 3px 3px 5px gray;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #info button {
+    background-color: AliceBlue;
+    /*working // it works only in scss*/
+    color: CadetBlue;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #info button {
+    background-color: Cornsilk;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.5rem;
+  }
+}
+#info button:hover {
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 1em;
+}
+.about button {
+  margin: 1.5em 0;
+  min-width: 50%;
+  outline: none;
+  background-color: CadetBlue;
+  color: #d1c1f0;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  box-shadow: 3px 3px 5px gray;
+  font-size: 1.3rem;
+}
+@media only screen and (min-width: 420px) {
+  .about button {
+    background-color: #efeafa;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 3px 3px 5px gray;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about button {
+    background-color: AliceBlue;
+    /*working // it works only in scss*/
+    color: CadetBlue;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .about button {
+    background-color: Cornsilk;
+    /*working // it works only in scss*/
+    color: Chocolate;
+    box-shadow: 1.5px 1.5px 3px gray;
+    font-size: 1.5rem;
+  }
+}
+.about button:hover {
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.before-after-img, .image-change, .vegetables-image, .removeAddImage {
+  width: 90%;
+}
+@media only screen and (min-width: 420px) {
+  .before-after-img, .image-change, .vegetables-image, .removeAddImage {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .before-after-img, .image-change, .vegetables-image, .removeAddImage {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .before-after-img, .image-change, .vegetables-image, .removeAddImage {
+    width: 40%;
+  }
+}
+
+.select-image {
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: DimGray;
+  width: 200px;
+  height: 170px;
+}
+@media only screen and (min-width: 420px) {
+  .select-image {
+    width: 330px;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .select-image {
+    width: 330px;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .select-image {
+    width: 330;
+    height: 300px;
+  }
+}
+.select-image:hover {
+  transition: 0.5s;
+  background-color: #262626;
+}

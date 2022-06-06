@@ -1,36 +1,36 @@
 import React, {Component,useState,useEffect} from "react";
 import ReactDOM from "react-dom";
-import Form from './Form';
+import {Form , UsersData} from './Form';
 import AsideLeft from "./aside-left";
 import AsideRight from "./aside-right";
 import Footer from "./Footer";
 import MenuNav from "./MenuNav";
-import InfoOne from "./info";
+import Info from "./info";
 import Logo from "./logo";
 import About from "./about";
-// import InfoTwo from "./infoTwo";
-// import InfoThree from "./infoThree";
-
-
+import persons from "../../data/db";
+console.log("persons.users[1].id is  : " , persons.users[1].id);
 
 function App(){
   return(
     <>
+    <div id="upperPart">
     <nav className="container">
-
     <Logo/>
     <MenuNav/>
-
     </nav>
+    <div class="text">Eat Healthy</div>
+    </div>
 
     <section id="content">
     <div class="aside">
     <AsideLeft/>
     </div>
     <div className="container">
-    <InfoOne/>
+    <Info/>
     <About/>
-    <Form/>
+    <Form userid={"users.id"} formTitle={"Complete form"}/>
+    <UsersData/>
     </div>
     <div class="aside">
     <AsideRight/>
@@ -38,7 +38,7 @@ function App(){
     </section>
 
     <div className="container">
-    <Footer id={"number"}/>
+    <Footer/>
     </div>
     </>
   )

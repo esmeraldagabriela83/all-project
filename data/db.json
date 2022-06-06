@@ -1,36 +1,82 @@
 {
   "users": [
     {
-      "name": "mihaela",
-      "username": "amg-aco",
-      "password": "123a",
-      "email": "micu-pisicu@yahoo.com",
+      "name": "Costache Mariana",
+      "username": "Mary",
+      "password": "mary123",
+      "email": "mary@yahoo.com",
+      "phone": "0722669123",
+      "message": "message from Mary",
       "usertype": "basic",
-      "id": 1
+      "age": "junior",
+      "tnc": true,
+      "checkpassword": "mary123",
+      "id": 29
     },
     {
-      "name": "gabriela Aco",
-      "username": "dent-mihaela",
-      "password": "123aco",
-      "email": "esmeraldagabriela83@yahoo.com",
+      "name": "Ionescu Andrei",
+      "username": "Andy",
+      "password": "234andy",
+      "email": "andy@gmail.com",
+      "phone": "0722669234",
+      "message": "Andy message",
       "usertype": "super",
-      "id": 2
+      "age": "adult",
+      "tnc": false,
+      "checkpassword": "234andy",
+      "id": 30
     },
     {
-      "name": "raluca",
-      "username": "raluca unirii",
-      "password": "ral38",
-      "email": "raluca@yahoo.com",
+      "name": "Voinea Viorica",
+      "username": "Vio",
+      "password": "vio345",
+      "email": "viorica@yahoo.com",
+      "phone": "0722669345",
+      "message": "Viorica message",
       "usertype": "admin",
-      "id": 3
+      "age": "elderly",
+      "tnc": true,
+      "checkpassword": "vio345",
+      "id": 31
     },
     {
-      "name": "alexandru",
-      "username": "alex",
-      "password": "alinasu",
-      "email": "alin@yahoo.com",
-      "usertype": "super",
-      "id": 4
+      "name": "User Try Form",
+      "username": "any user",
+      "password": "xuser",
+      "email": "user@yahoo.com",
+      "phone": "0722669610",
+      "message": "user message",
+      "usertype": "admin",
+      "age": "adult",
+      "tnc": true,
+      "checkpassword": "xuser",
+      "id": 32
+    },
+    {
+      "name": "Mihaela Gabriela",
+      "username": "Gabi",
+      "password": "gabi123",
+      "email": "esmeraldagabriela83@yahoo.com",
+      "phone": "0722669610",
+      "message": "contact me",
+      "usertype": "admin",
+      "age": "junior",
+      "tnc": true,
+      "checkpassword": "gabi123",
+      "id": 33
+    },
+    {
+      "name": "Alexandru Aco",
+      "username": "Alin",
+      "password": "alin85",
+      "email": "alin@gmail.com",
+      "phone": "1234567890",
+      "message": "alin message",
+      "usertype": "basic",
+      "age": "adult",
+      "tnc": true,
+      "checkpassword": "alin85",
+      "id": 34
     }
   ]
 }

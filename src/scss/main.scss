@@ -62,21 +62,66 @@ body {
     }
 
     .container {
-      border: 3px solid black;
+      // border: 3px solid black;
       max-width: 1024px;
       margin: 0 auto;
       padding: 1em;
     }
+#upperPart{
+  height:450px;
+  width: 100vw;
+  position: relative;
 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 1.5px 1.5px 3px gray;
+  background-image: url("../assets/images/health.jpg");
+
+  @include xs {
+    height:500px;
+  }
+  @include sm {
+    height:700px;
+  }
+  @include md {
+    height:900px;
+  }
+
+  .text{
+  background-color: DimGray;
+  color: white;
+  font-size: 7vw;
+  font-weight: bold;
+  margin: 0 auto;
+  border-radius: 5px;
+  // padding: 10px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode:multiply;
+  }
+}
     nav{
       display:flex;
       align-items: start;
       justify-content: space-between;
       width: 100%;
-      padding: 1.5em;
+      padding: 0.5em;
+      // background-color: white;
+      #logo{
+        color:DimGray;
+        // &:hover{
+        //   color: #262626;
+        // }
+      }
 
       ion-icon{
         color:DimGray;
+        font-size: 2rem;
         &:hover{
           color: #262626;
         }
@@ -118,7 +163,7 @@ body {
       }
     }
 
-    .footer{
+    .sources-footer{
       h5{
         text-align: center;
         margin:0.5em 0;
@@ -137,7 +182,6 @@ body {
       flex-direction: row;
 
       .aside {
-        border: 10px dotted red;
         height: auto;
         width: 25vw;
         display: none;
@@ -176,7 +220,6 @@ body {
           background-image: url("../assets/images/image-left1.jpg");
         }
         #image-left2 {
-          margin-top:2.5em;
           background-image: url("../assets/images/image-left2.jpg");
         }
         #image-right1 {
@@ -194,7 +237,6 @@ body {
   display: block;
   // width: clamp(20%, 45%, 50%);
   width: 100%;
-  // height:100vh;
   border-radius: 0.3em;
   padding: 1.5em;
   // background-color: Ivory;
@@ -217,7 +259,7 @@ body {
   @include md {
     color: Cornsilk;
     /*working // it works only in scss*/
-    background-color: Chocolate;
+    background-color: lighten(#D2691E, 20%);
     box-shadow: 3px 3px 5px gray;
   }
 
@@ -225,27 +267,46 @@ body {
     text-transform: capitalize;
     letter-spacing: 0.1em;
     // display: block;
+
+    &.error {
+      color: red;
+        input , textarea{
+          border:3px solid red !important;
+        }
+    }
+
+    &.valid {
+      color: green;
+        input , textarea{
+          border:3px solid green !important;
+        }
+    }
+
     input {
       // display: block;
       width: 100%;
       line-height: 2em;
       border-radius: 0.3em;
       border: 1.5px solid DimGray;
-      font-weight: bold;
+      // font-weight: bold;
       color: CadetBlue;
       @include xs {
         color: Chocolate;
+        font-size: 1.3rem;
       }
       @include sm {
         color: CadetBlue;
+        font-size: 1.4rem;
       }
       @include md {
+        font-size: 1.5rem;
         color: Chocolate;
       }
 
       &:focus {
         outline: none;
         border: 3px solid gray;
+        background-color: HoneyDew;
       }
     }
 
@@ -253,15 +314,34 @@ body {
       margin-top: -3em;
       display: inline-block;
     }
-
-    &.error {
-      color: red;
-    }
-
-    &.valid {
-      color: green;
-    }
   }
+
+textarea{
+  width:100%;
+  height:10vh;
+  border-radius: 0.3em;
+  border: 1.5px solid DimGray;
+  font-weight: bold;
+  color: CadetBlue;
+  @include xs {
+    color: Chocolate;
+    font-size: 1.3rem;
+  }
+  @include sm {
+    color: CadetBlue;
+    font-size: 1.4rem;
+  }
+  @include md {
+    color: Chocolate;
+    font-size: 1.5rem;
+  }
+
+  &:focus {
+    outline: none;
+    border: 3px solid gray;
+    background-color: HoneyDew;
+  }
+}
 
   #center-button {
     display: flex;
@@ -276,7 +356,8 @@ body {
       color: lighten(#9370DB, 20%);
       font-size: 1rem;
       letter-spacing: 0.1em;
-      border: 1.5px DimGray solid;
+      // border: 1.5px DimGray solid;
+      border:none;
       border-radius: 0.3em;
       padding: 0.5em;
       box-shadow: 3px 3px 5px gray;
@@ -311,3 +392,248 @@ body {
 }
 ////////////////////////////////////////////////////////////
 ///
+
+select{
+  width: 45%;
+  line-height: 2em;
+  border-radius: 0.3em;
+  border: 1.5px solid DimGray;
+  // font-weight: bold;
+  color: CadetBlue;
+  @include xs {
+    color: Chocolate;
+    font-size: 1.3rem;
+    padding:0 1em;
+  }
+  @include sm {
+    color: CadetBlue;
+    font-size: 1.4rem;
+  }
+  @include md {
+    font-size: 1.5rem;
+    color: Chocolate;
+  }
+
+  &:focus {
+    outline: none;
+    border: 3px solid gray;
+    background-color: HoneyDew;
+  }
+
+  option{
+    width: 100%;
+    line-height: 2em;
+    border-radius: 0.3em;
+    border: 1.5px solid DimGray;
+    // font-weight: bold;
+    color: CadetBlue;
+    @include xs {
+      color: Chocolate;
+      font-size: 1.3rem;
+    }
+    @include sm {
+      color: CadetBlue;
+      font-size: 1.4rem;
+    }
+    @include md {
+      font-size: 1.5rem;
+      color: Chocolate;
+    }
+
+    &:focus {
+      outline: none;
+      border: 3px solid gray;
+      background-color: HoneyDew;
+    }
+
+  }
+
+}
+/////////////////
+
+#footer{
+  // border:3px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  button{
+    margin-top: 0.5em;
+    min-width: 50%;
+    outline: none;
+    background-color: CadetBlue;
+    color: lighten(#9370DB, 20%);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    // border: 1.5px DimGray solid;
+    border:none;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    box-shadow: 3px 3px 5px gray;
+    font-size: 1.3rem;
+    @include xs {
+      background-color: lighten(#9370DB, 30%);
+      /*working // it works only in scss*/
+      color: Chocolate;
+      box-shadow: 3px 3px 5px gray;
+    }
+    @include sm {
+      background-color: AliceBlue;
+      /*working // it works only in scss*/
+      color: CadetBlue;
+      box-shadow: 1.5px 1.5px 3px gray;
+      font-size: 1.4rem;
+    }
+    @include md {
+      background-color: Cornsilk;
+      /*working // it works only in scss*/
+      color: Chocolate;
+      box-shadow: 1.5px 1.5px 3px gray;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      font-weight: bold;
+      transition: 0.5s;
+    }
+  }
+}
+////////////////
+
+#info{
+  // border:3px solid green;
+
+  button{
+    margin: 1.5em 0;
+    min-width: 50%;
+    outline: none;
+    background-color: CadetBlue;
+    color: lighten(#9370DB, 20%);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    // border: 1.5px DimGray solid;
+    border:none;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    box-shadow: 3px 3px 5px gray;
+    font-size: 1.3rem;
+    @include xs {
+      background-color: lighten(#9370DB, 30%);
+      /*working // it works only in scss*/
+      color: Chocolate;
+      box-shadow: 3px 3px 5px gray;
+    }
+    @include sm {
+      background-color: AliceBlue;
+      /*working // it works only in scss*/
+      color: CadetBlue;
+      box-shadow: 1.5px 1.5px 3px gray;
+      font-size: 1.4rem;
+    }
+    @include md {
+      background-color: Cornsilk;
+      /*working // it works only in scss*/
+      color: Chocolate;
+      box-shadow: 1.5px 1.5px 3px gray;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      font-weight: bold;
+      transition: 0.5s;
+    }
+  }
+}
+
+//////////////////
+
+.about{
+ //border:3px solid pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin:0 1em;
+  button{
+    margin: 1.5em 0;
+    min-width: 50%;
+    outline: none;
+    background-color: CadetBlue;
+    color: lighten(#9370DB, 20%);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    // border: 1.5px DimGray solid;
+    border:none;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    box-shadow: 3px 3px 5px gray;
+    font-size: 1.3rem;
+    @include xs {
+      background-color: lighten(#9370DB, 30%);
+      /*working // it works only in scss*/
+      color: Chocolate;
+      box-shadow: 3px 3px 5px gray;
+    }
+    @include sm {
+      background-color: AliceBlue;
+      /*working // it works only in scss*/
+      color: CadetBlue;
+      box-shadow: 1.5px 1.5px 3px gray;
+      font-size: 1.4rem;
+    }
+    @include md {
+      background-color: Cornsilk;
+      /*working // it works only in scss*/
+      color: Chocolate;
+      box-shadow: 1.5px 1.5px 3px gray;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      font-weight: bold;
+      transition: 0.5s;
+    }
+  }
+}
+
+//////////////////
+.before-after-img , .image-change , .vegetables-image , .removeAddImage{
+  width:90%;
+  @include xs {
+  width:80%;
+  }
+  @include sm {
+  width:60%;
+  }
+  @include md {
+  width:40%;
+  }
+}
+
+/////////////
+.select-image{
+  padding:0.5em;
+  border-radius:50%;
+  background-color:DimGray;
+  width:200px;
+  height:170px;
+  @include xs {
+  width:330px;
+  height:300px;
+  }
+  @include sm {
+  width:330px;
+  height:300px;
+  }
+  @include md {
+  width:330;
+  height:300px;
+  }
+    &:hover{
+    transition:0.5s;
+    background-color:#262626;
+  }
+}
+
+///////////
